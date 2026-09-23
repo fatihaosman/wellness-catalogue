@@ -129,13 +129,13 @@ This generated the `dist` folder containing the production-ready website files.
 The following screenshots show the React frontend and the main pages of the wellness product catalogue.
 
 <div align="center">
-  <img src="images/wellnesspage1.png" alt="Women's Wellness Product Catalogue - Page 1" width="800">
+  <img src="public/images/wellnesspage1.png" alt="Women's Wellness Product Catalogue - Page 1" width="800">
 </div>
 
 ### Wellness Catalogue - Product Section
 
 <div align="center">
-  <img src="images/wellnesspage2.png" alt="Women's Wellness Product Catalogue - Page 2" width="800">
+  <img src="public/images/wellnesspage2.png" alt="Women's Wellness Product Catalogue - Page 2" width="800">
 </div>
 
 ### Products Database
@@ -143,7 +143,7 @@ The following screenshots show the React frontend and the main pages of the well
 The products displayed on the React frontend are stored in the DynamoDB `products` table and retrieved through the API.
 
 <div align="center">
-  <img src="images/productsdatabase.png" alt="Products DynamoDB table" width="800">
+  <img src="public/images/productsdatabase.png" alt="Products DynamoDB table" width="800">
 </div>
 
 ### Inquiry Database
@@ -151,7 +151,7 @@ The products displayed on the React frontend are stored in the DynamoDB `product
 When a customer submits an inquiry through the website, the information is sent through API Gateway and Lambda and stored in the DynamoDB `inquiries` table.
 
 <div align="center">
-  <img src="images/inquirydatabase.png" alt="Customer inquiries DynamoDB table" width="800">
+  <img src="public/images/inquirydatabase.png" alt="Customer inquiries DynamoDB table" width="800">
 </div>
 
 ## S3 Deployment
