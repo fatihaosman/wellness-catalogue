@@ -17,7 +17,6 @@ Customers can view products, see prices and benefits, select a product, and subm
 * S3
 * CloudFront
 
-
 ## Architecture
 
 ```text
@@ -34,11 +33,11 @@ Website deployment:
 
 ```text
 User
- ↓
+  ↓
 CloudFront
- ↓
+  ↓
 Private S3 Bucket
- ↓
+  ↓
 React Website
 ```
 
@@ -123,6 +122,38 @@ npm run build
 
 This generated the `dist` folder containing the production-ready website files.
 
+## Screenshots
+
+### Wellness Catalogue
+
+The following screenshots show the React frontend and the main pages of the wellness product catalogue.
+
+<div align="center">
+  <img src="images/wellnesspage1.png" alt="Women's Wellness Product Catalogue - Page 1" width="800">
+</div>
+
+### Wellness Catalogue - Product Section
+
+<div align="center">
+  <img src="images/wellnesspage2.png" alt="Women's Wellness Product Catalogue - Page 2" width="800">
+</div>
+
+### Products Database
+
+The products displayed on the React frontend are stored in the DynamoDB `products` table and retrieved through the API.
+
+<div align="center">
+  <img src="images/productsdatabase.png" alt="Products DynamoDB table" width="800">
+</div>
+
+### Inquiry Database
+
+When a customer submits an inquiry through the website, the information is sent through API Gateway and Lambda and stored in the DynamoDB `inquiries` table.
+
+<div align="center">
+  <img src="images/inquirydatabase.png" alt="Customer inquiries DynamoDB table" width="800">
+</div>
+
 ## S3 Deployment
 
 The production `dist` files were uploaded to a **private S3 bucket**.
@@ -165,7 +196,7 @@ The frontend initially used an incorrect API Gateway URL. The correct Invoke URL
 
 ### CORS Error
 
-The browser blocked API requests because CORS was not configured. API Gateway CORS was configured to allow the frontend origin and required methods.
+The browser blocked API requests because CORS was not configured correctly for the deployed frontend. API Gateway CORS was configured to allow the CloudFront frontend origin and the required methods.
 
 ### CloudFront 403 Error
 
